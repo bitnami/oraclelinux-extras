@@ -50,5 +50,4 @@ RUN cd /tmp && \
 ENV PATH=/opt/bitnami/nami/bin:$PATH
 ENV BITNAMI_IMAGE_VERSION=7-r0
 
-COPY rootfs /
 ENTRYPOINT ["/entrypoint.sh"]
