@@ -15,7 +15,7 @@ RUN install_packages gcc-c++ pkgconfig tar gzip unzip git curl ca-certificates s
 RUN sed -i 's/^PASS_MAX_DAYS.*/PASS_MAX_DAYS    90/' /etc/login.defs && \
     sed -i 's/^PASS_MIN_DAYS.*/PASS_MIN_DAYS    1/' /etc/login.defs
 
-ENV NAMI_VERSION 0.0.8-0
+ENV NAMI_VERSION=0.0.8-0
 
 RUN cd /tmp && \
     curl -sSLO https://nami-prod.s3.amazonaws.com/tools/nami/releases/nami-$NAMI_VERSION-linux-x64.tar.gz && \
@@ -24,7 +24,7 @@ RUN cd /tmp && \
     tar xzf nami-$NAMI_VERSION-linux-x64.tar.gz --strip 1 -C /opt/bitnami/nami && \
     rm nami-$NAMI_VERSION-linux-x64.tar.gz
 
-ENV TINI_VERSION v0.13.2
+ENV TINI_VERSION=v0.13.2
 
 RUN cd /tmp && \
     gpg --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 595E85A6B1B4779EA4DAAEC70B588DFF0527A9B7 && \
