@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/bitnami/oraclelinux-extras.svg?style=svg)](https://circleci.com/gh/bitnami/oraclelinux-extras)
+
 # `bitnami/oraclelinux-extras`
 
 ## TL;DR
