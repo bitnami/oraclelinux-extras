@@ -1,6 +1,0 @@
-FROM bitnami/oraclelinux-extras:7
-ENV BITNAMI_APP_NAME=apache
-RUN install_packages wget apr apr-util bzip2-libs glibc \
-    libcom_err libcurl expat libffi
-RUN IMAGE_OS=rhel-7 bitnami-pkg install apache-2.4.33-0
-CMD ["nami", "start", "--foreground", "apache"]
