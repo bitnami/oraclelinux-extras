@@ -16,7 +16,7 @@ The `Dockerfile` installs [Nami](https://github.com/bitnami/nami) and includes a
 
 Use like a regular base image.
 
-The following example uses the `install_packages` helper script, provided by `minideb`, to install APT packages from the Debian repositories. The `bitnami-pkg` tool to install `nami` packages published by Bitnami.
+The following example uses the `install_packages` helper script to install packages from the Oracle Linux repositories using `yum`. The `bitnami-pkg` tool to install `nami` packages published by Bitnami.
 
 ```dockerfile
 FROM bitnami/oraclelinux-extras:7
