@@ -44,16 +44,24 @@ identify_distro() {
 }
 
 identify_arch() {
-  case $(arch) in
-  x86_64)
-    arch=x64
-    ;;
+  local arch=$(arch)
+
+  case "${arch}" in
   ppc64le)
-    arch=ppc64le
+    ;; # no-op
+  x86_64)
+    case $(identify_distro) in
+    debian-8)
+      arch=x64 # legacy naming
+      ;;
+    debian-*)
+      arch=amd64
+      ;;
+    esac
     ;;
   *)
-   arch="unknown"
-   ;;
+    arch="unknown"
+    ;;
   esac
   echo $arch
 }
