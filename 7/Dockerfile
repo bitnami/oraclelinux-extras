@@ -4,7 +4,7 @@ ENV IMAGE_OS=ol-7
 
 COPY rootfs /
 
-RUN install_packages tar gzip curl ca-certificates sudo procps-ng libaio-devel && \
+RUN install_packages tar gzip curl ca-certificates sudo procps-ng libaio-devel which && \
     useradd -ms /bin/bash bitnami && \
     mkdir -p /opt/bitnami && chown bitnami:bitnami /opt/bitnami && \
     sed -i -e 's/\s*Defaults\s*secure_path\s*=/# Defaults secure_path=/' /etc/sudoers && \
