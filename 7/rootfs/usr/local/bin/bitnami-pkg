@@ -57,6 +57,12 @@ identify_arch() {
     debian-*)
       arch=amd64
       ;;
+    ol-*)
+      arch=x86_64
+      ;;
+    rhel-*)
+      arch=x86_64
+      ;;
     esac
     ;;
   *)
