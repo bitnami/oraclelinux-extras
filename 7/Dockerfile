@@ -5,6 +5,7 @@ ENV IMAGE_OS=ol-7
 COPY rootfs /
 
 RUN yum-config-manager --enable ol7_developer_EPEL && \
+    yum-config-manager --enable ol7_optional_latest && \
     yum update -y && \
     install_packages tar gzip curl ca-certificates sudo procps-ng libaio-devel which && \
     useradd -ms /bin/bash bitnami && \
@@ -50,6 +51,6 @@ RUN cd /tmp && \
   rm gosu.asc
 
 ENV PATH=/opt/bitnami/nami/bin:$PATH
-ENV BITNAMI_IMAGE_VERSION=7-r6
+ENV BITNAMI_IMAGE_VERSION=7-r7
 
 ENTRYPOINT ["/entrypoint.sh"]
