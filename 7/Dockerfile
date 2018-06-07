@@ -4,8 +4,7 @@ ENV IMAGE_OS=ol-7
 
 COPY rootfs /
 
-RUN yum-config-manager --enable ol7_developer_EPEL && \
-    yum-config-manager --enable ol7_optional_latest && \
+RUN yum-config-manager --enable ol7_developer_EPEL ol7_optional_latest && \
     yum update -y && \
     install_packages tar gzip curl ca-certificates sudo procps-ng libaio-devel which && \
     useradd -ms /bin/bash bitnami && \
