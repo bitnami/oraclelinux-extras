@@ -6,7 +6,7 @@ COPY rootfs /
 
 RUN yum-config-manager --enable ol7_developer_EPEL ol7_optional_latest && \
     yum upgrade -y && \
-    install_packages tar gzip curl ca-certificates sudo procps-ng libaio-devel which && \
+    install_packages tar gzip curl ca-certificates sudo bsdtar procps-ng libaio-devel which && \
     useradd -ms /bin/bash bitnami && \
     mkdir -p /opt/bitnami && chown bitnami:bitnami /opt/bitnami && \
     sed -i -e 's/\s*Defaults\s*secure_path\s*=/# Defaults secure_path=/' /etc/sudoers && \
@@ -50,6 +50,6 @@ RUN cd /tmp && \
   rm gosu.asc
 
 ENV PATH=/opt/bitnami/nami/bin:$PATH
-ENV BITNAMI_IMAGE_VERSION=7-r30
+ENV BITNAMI_IMAGE_VERSION=7-r31
 
 ENTRYPOINT ["/entrypoint.sh"]
