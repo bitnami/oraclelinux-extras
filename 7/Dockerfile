@@ -61,6 +61,6 @@ RUN cd /tmp && \
   rm gosu.asc
 
 ENV PATH=/opt/bitnami/nami/bin:$PATH
-ENV BITNAMI_IMAGE_VERSION=7-r501
+ENV BITNAMI_IMAGE_VERSION=7-r502
 
 ENTRYPOINT ["/entrypoint.sh"]
