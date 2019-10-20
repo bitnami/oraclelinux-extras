@@ -10,7 +10,7 @@ FROM bitnami/oraclelinux-extras
 
 ## About
 
-The `bitnami/oraclelinux-extras` image is a customized base image for use in Bitnami container images and is built on top of the optimized (Oracle Linux image)[https://hub.docker.com/r/library/oraclelinux/] from Docker Hub.
+The `bitnami/oraclelinux-extras` image is a customized base image for use in Bitnami container images and is built on top of the optimized [Oracle Linux image](https://hub.docker.com/r/library/oraclelinux/) from Docker Hub.
 
 The `Dockerfile` installs [Nami](https://github.com/bitnami/nami) and includes a `bitnami-pkg` helper script to simplify downloading of Nami modules from the Bitnami package repositories. Additionally the `Dockerfile` installs [tini](https://github.com/krallin/tini)  and is used in the default [entrypoint](../../blob/master/rootfs/entrypoint.sh).
 
